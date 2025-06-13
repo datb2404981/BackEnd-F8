@@ -1,5 +1,7 @@
 import newsRouter from './news.js';
 import siteRouter from './site.js';
+import coursesRouter from './courses.js';
+import meRouter from './me.js';
 
 function route(app) {
  
@@ -8,10 +10,15 @@ function route(app) {
   app.get('/search', siteRouter);
   
   app.post('/search', siteRouter);
-  
+
+  app.use('/courses', coursesRouter);
+
+  app.use('/me', meRouter);
+
   app.get('/', siteRouter);
 
   
+
 };
 
 export default route;

@@ -6,6 +6,4 @@ const router = express.Router();
 
 router.get('/:slug', newController.show);
 
-
-
 export default router;
